@@ -1,12 +1,13 @@
 <?php
 // Buat array asosiatif nilai
-$nilai1 = ["id" => 1, "nim" => "01101", "uts" => 80, "uas" => 84, "tugas" => 78];
-$nilai2 = ["id" => 2, "nim" => "01102", "uts" => 90, "uas" => 80, "tugas" => 88];
-$nilai3 = ["id" => 3, "nim" => "01103", "uts" => 70, "uas" => 74, "tugas" => 70];
-$nilai4 = ["id" => 4, "nim" => "01104", "uts" => 88, "uas" => 95, "tugas" => 80];
+$nilai1 = ["id" => 1, "nama" => "Dini", "nim" => "011025", "uts" => 100, "uas" => 100, "tugas" => 100];
+$nilai2 = ["id" => 2, "nama" => "Dono", "nim" => "011024", "uts" => 90, "uas" => 90, "tugas" => 90];
+$nilai3 = ["id" => 3, "nama" => "Dunu", "nim" => "011023", "uts" => 80, "uas" => 80, "tugas" => 80];
+$nilai4 = ["id" => 4, "nama" => "Dene", "nim" => "011022", "uts" => 70, "uas" => 70, "tugas" => 70];
+$nilai5 = ["id" => 5, "nama" => "Dana", "nim" => "011021", "uts" => 60, "uas" => 60, "tugas" => 60];
 
 // Buat array multidimensi
-$kumpulan_nilai = [$nilai1, $nilai2, $nilai3, $nilai4];
+$kumpulan_nilai = [$nilai1, $nilai2, $nilai3, $nilai4, $nilai5];
 ?>
 
 <!doctype html>
@@ -27,10 +28,11 @@ $kumpulan_nilai = [$nilai1, $nilai2, $nilai3, $nilai4];
 <body>
     <div class="container">
         <h1 class="text-center">Daftar Nilai Siswa</h1>
-        <table class="table border border-success shadow rounded">
-            <thead class="table-warning">
+        <table class="table table-striped border border-success">
+            <thead class="table-danger">
                 <tr class="text-center">
                     <th scope="col">No</th>
+                    <th scope="col">Nama</th>
                     <th scope="col">NIM</th>
                     <th scope="col">UTS</th>
                     <th scope="col">UAS</th>
@@ -45,6 +47,7 @@ $kumpulan_nilai = [$nilai1, $nilai2, $nilai3, $nilai4];
                     <tr>
                         <?php $nilai_akhir = ($nilai["uts"] + $nilai["uas"] + $nilai["tugas"]) / 3; ?>
                         <td><?= $nilai["id"]?></td>
+                        <td><?= $nilai["nama"]?></td>
                         <td><?= $nilai["nim"]?></td>
                         <td><?= $nilai["uts"]?></td>
                         <td><?= $nilai["uas"]?></td>
